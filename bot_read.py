@@ -9,8 +9,8 @@ reddit = praw.Reddit("YafetBot")
 
 subreddit = reddit.subreddit("learnpython")
 
-##This loop iterates through the top 3 hot posts in the specified subreddit.
-for submission in subreddit.hot(limit=3):
+##This loop iterates through the top 5 hot posts in the specified subreddit.
+for submission in subreddit.hot(limit=5):
     print("Title: ", submission.title) ##Prints the title of the post.
     print("Text: ", submission.selftext)  ##Prints the text content of the post (if any).
     print("Score: ", submission.score) ##Prints the score (upvotes minus downvotes) of the post.
